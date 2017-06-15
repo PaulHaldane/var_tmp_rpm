@@ -21,6 +21,20 @@ drwxrwxrwt. 7 root root 4096 Jun 15 14:39 /var/tmp
 [vagrant@localhost paul1]$ ls -ld /var/tmp
 drwxrwx---. 7 root root 4096 Jun 15 14:39 /var/tmp
 ```
+## CentOS 6.x
+
+```
+[vagrant@localhost var_tmp_rpm]$ rpm -qlvp ~/rpmbuild/RPMS/x86_64/var_tmp-1.0-1.x86_64.rpm
+drwxrwx---    2 root    root                        0 Jun 15 14:58 /var/tmp
+[vagrant@localhost var_tmp_rpm]$ sudo rpm -i ~/rpmbuild/RPMS/x86_64/var_tmp-1.0-1.x86_64.rpm
+[vagrant@localhost var_tmp_rpm]$ ls -ld /var/tmp
+drwxrwx---. 2 root root 4096 Jun 15 14:58 /var/tmp
+[vagrant@localhost var_tmp_rpm]$ rpm -q var_tmp
+var_tmp-1.0-1.x86_64
+[vagrant@localhost var_tmp_rpm]$ rpm -qf /var/tmp
+filesystem-2.4.30-3.el6.x86_64
+var_tmp-1.0-1.x86_64
+```
 
 ## CentOS 5.11
 
